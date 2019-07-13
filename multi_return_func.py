@@ -6,7 +6,7 @@ a =  swap(1,2)
 x,y = swap(1,2)
 
 print(type(a))
-#tuple갑 일기
+#return된 tuple값 하나씩 읽기
 print(a[0],a[1])
 print(a)
 print(x,y)

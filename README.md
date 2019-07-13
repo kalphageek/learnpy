@@ -1,6 +1,12 @@
 ## Learn Py Example
 Bigbucket을 이용한 git version관리 테스트
 
+## 
+Builtin함수 -> Core모듈 -> 써드파티모듈
+
+## 모듈 import
+from 패키지명 import 모듈명
+
 ---
 ## 써드파티 모듈 중앙저장소
 [pypi](https://pypi.python.org/pypi)
@@ -9,8 +15,3 @@ Bigbucket을 이용한 git version관리 테스트
 ## request 모듈 설치 
 pip install request
 
----
-## Files
-src/
-[multi_param_func.py](/src/multi_param_func.py)
-[multi_return_func.py](/src/multi_return_func.py)

@@ -1,6 +1,7 @@
+#List
 def func1(*p):
     return p
-
+#Dictionary
 def func2(**p):
     for k,v in p.items():
         return k,v

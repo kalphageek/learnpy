@@ -13,5 +13,9 @@ from 패키지명 import 모듈명
 
 ---
 ## request 모듈 설치 
-pip install request
+pip list
+pip install requests
 
+## 자주사용되는 Builtin 함수
+isalpha(), isalnum(), isnumeric(), isdecimal(), isspace()
+startswith(), endswith()

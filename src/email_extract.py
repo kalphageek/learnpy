@@ -27,3 +27,9 @@ def copy_result_to_clipboard(matches):
 def main():
     matchs = find_match_list()
     copy_result_to_clipboard(matches)
+
+main()
+
+#1.text를 ctrl+c로 복사
+#2.email_extract.py 실행
+#3.text파일에 ctrl+v

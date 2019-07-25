@@ -4,8 +4,8 @@ from requests import Session
 s = Session()
 
 headers = {
-    'X-Naver-Client-Id': 'TVcdGN3l5f8ZIswuZ4tX',
-    'X-Naver-Client-Secret': '4F9aWQDSdZ',
+    'X-Naver-Client-Id': '9qTwRVUXrl6d8KE_A9bw',
+    'X-Naver-Client-Secret': '4VAmjqZDkd',
 }
 
 text = "Yesterday all my troubles seemed so far away."

@@ -8,15 +8,15 @@ headers = {
     'X-Naver-Client-Secret': '4VAmjqZDkd',
 }
 
-text = "Yesterday all my troubles seemed so far away."
+text = "All Python releases are Open Source. Historically, most, but not all, Python releases have also been GPL-compatible. The Licenses page details GPL-compatibility and Terms and Conditions. "
 
 payload = {
     'source': 'en',
     'target': 'ko',
-    'text': text,
+    'text': text
 }
 
-url = 'https://openapi.naver.com/v1/language/translate'
+url = 'https://openapi.naver.com/v1/papago/n2mt'
 
 req = Request('POST', url, data=payload, headers=headers)
 prepped = req.prepare()

@@ -4,7 +4,7 @@ import time
 def calc_prod():
     # Calculate the product of the first 100,000 numbers.
     product = 1
-    for i in range(1, 10000):
+    for i in range(1, 30000):
         product = product * i
     return product
 

@@ -9,18 +9,18 @@ import time
 logging.basicConfig(filename='remote_job_log.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Configure the program by setting some variables.
-MY_EMAIL = 'asweigart@gmail.com' # bot should only respond to me
-BOT_EMAIL = 'imaptest@coffeeghost.net'
-BOT_EMAIL_PASSWORD = 'PASSWORD'
+MY_EMAIL = 'kalphageek@gmail.com' # bot should only respond to me
+BOT_EMAIL = 'kalphageek@outlook.com'
+BOT_EMAIL_PASSWORD = 'jeong11211@'
 TORRENT_PROGRAM = 'C:\\Program Files (x86)\\qBittorrent\\qbittorrent.exe'
-SMTP_SERVER = 'smtp.gmail.com'
-SMTP_PORT = 465
+SMTP_SERVER = 'smtp.office365.com'
+SMTP_PORT = 587
 
 
 def check_and_get_instruction_email():
     # 로그인 imap
     logging.debug('Connecting to IMAP server..')
-    imap = imaplib.IMAP4_SSL('imap.gmail.com')
+    imap = imaplib.IMAP4_SSL('outlook.office365.com')
     imap.login(BOT_EMAIL, BOT_EMAIL_PASSWORD)
     logging.debug('Connected.')
 
@@ -34,8 +34,8 @@ def check_and_get_instruction_email():
         logging.debug('No mail founded..')
         return instructions
 
-    result, data = imap.uid('search', None, '(HEADER Subject "instruction")')
-    uids = data[0].split()
+    result, data = imap.uid('search', None, '(HEADER Subject "주간 활동 보고서")')
+    uids = data[0].split() #string -> List로 변경
 
     for target_uid in uids:
         result, data = imap.uid('fetch', target_uid, '(RFC822)')

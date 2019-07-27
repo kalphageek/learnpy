@@ -17,7 +17,7 @@ def check_unpaid_memebers():
             email = sheet.cell(row=r, column=2).value
             unpaid_members[name] = email
 
-    return unpaid_members
+    return unpaid_members #dictionary return
 
 
 def main():
@@ -25,10 +25,10 @@ def main():
     unpaid_members = check_unpaid_memebers()
 
     # Log in to email account.
-    smtp = smtplib.SMTP('smtp.gmail.com', 587)
+    smtp = smtplib.SMTP('smtp.office365.com', 587)
     smtp.ehlo()
     smtp.starttls()
-    smtp.login('my_email_address@gmail.com', 'password')
+    smtp.login('kalphageek@outlook.com','***11211@')
 
     # 미납회원에게 리마인드 메일을 보낸다.
     for name, email in unpaid_members.items():

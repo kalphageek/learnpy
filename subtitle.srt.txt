@@ -1,6 +1,11 @@
-To find the number of enrollments I'll use the len function.
-And running this cell I can see that there were 1,640 enrollments.
-To find the number of unique students who enrolled, I'll add the account keys to a set and then look at the length of the set.
+To find the number of enrollments
+I'll use the len function.
+And running this cell I can see
+that there were 1,640 enrollments.
+To find the number of unique
+students who enrolled,
+I'll add the account keys to a set and
+then look at the length of the set.
 So, first I'll create an empty set
 called unique_enrolled_students.
 Then I'll loop through the enrollments.

@@ -9,6 +9,9 @@ for phone in phone_regex.findall(text):
 #r' 는 문자를 문자 자체로 인식하도록 함
 #Flag -> re.I :대소문자 무시할때 사용, re.VERBOSE : 패턴이 길어지는 경우 사용
 #r'''는 Multi Line 문자열
+#(?: ... ) -> Non Capturing group
+#re.match("c", "abcdef")    # No match
+#re.search("c", "abcdef")   # Match
 email_regex = re.compile(r'''
     ([\w\-.]+)                 #group #1 - username
     @                           #@ symbol
@@ -18,3 +21,16 @@ result = email_regex.search('My Email is kalphageek-01@outlook.co.kr.kr')
 print('Email : '+result.group(0))
 print('Username : '+result.group(1))
 print('Domain : '+result.group(2))
+
+text = """Ross McFluff: 834.345.1254 155 Elm Street
+...
+... Ronald Heathmore: 892.345.3428 436 Finley Avenue
+... Frank Burger: 925.541.7625 662 South Dogwood Way
+...
+...
+... Heather Albrecht: 548.326.4584 919 Park Place"""
+entries = re.split("\n+", text)
+for entry in entries:
+    items = re.split(":? ", entry)
+    for item in items:
+        print(item)

@@ -12,9 +12,15 @@ for phone in phone_regex.findall(text):
 email_regex = re.compile(r'''
     ([\w\-.]+)                 #group #1 - username
     @                           #@ symbol
+<<<<<<< HEAD
     ([\w\-]+(?:\.\w{2,4}){1,2})    #domain name
     ''', re.VERBOSE)
 result = email_regex.search('My Email is kalphageek-01@outlook.co.kr.kr')
+=======
+    ([\w\-.]+\.\w{2,4}){1,2}    #domain name
+    ''', re.VERBOSE)
+result = email_regex.search('My Email is kalphageek-01@outlook.com')
+>>>>>>> af4f4028bddd566ce8675a831732f64731a4d3a2
 print('Email : '+result.group(0))
 print('Username : '+result.group(1))
 print('Domain : '+result.group(2))

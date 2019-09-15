@@ -10,7 +10,7 @@ for phone in phone_regex.findall(text):
 #Flag -> re.I :대소문자 무시할때 사용, re.VERBOSE : 패턴이 길어지는 경우 사용
 #r'''는 Multi Line 문자열
 email_regex = re.compile(r'''
-    ([\w\-.+]+)                 #group #1 - username
+    ([\w\-.]+)                 #group #1 - username
     @                           #@ symbol
     ([\w\-.]+\.\w{2,4}){1,2}    #domain name
     ''', re.VERBOSE)

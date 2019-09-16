@@ -5,7 +5,7 @@ from email.message import EmailMessage
 msg = EmailMessage()
 msg['Subject'] = 'Python Mail Test ...'
 msg['From'] = 'kalphageek@outlook.com'
-msg['To'] = 'kalphageek@gmail.com'
+msg['To'] = 'kalphageek@outlook.com'
 msg.set_content('''
 안녕하세요.
 
@@ -19,8 +19,8 @@ smtp = smtplib.SMTP('smtp.office365.com', 587)
 smtp.ehlo()
 # SMTP_SSL인경우는 starttls안한다
 smtp.starttls()
-# smtp.login('soongon@gmail.com', 'tnsrhsl33')
-smtp.login('kalphageek@outlook.com','***11211@')
+# smtp.login('soongon@gmail.com', '****')
+smtp.login('kalphageek@outlook.com','*******')
 smtp.send_message(msg)
 smtp.quit()
 

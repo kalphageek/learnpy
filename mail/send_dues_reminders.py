@@ -28,7 +28,7 @@ def main():
     smtp = smtplib.SMTP('smtp.office365.com', 587)
     smtp.ehlo()
     smtp.starttls()
-    smtp.login('kalphageek@outlook.com','***11211@')
+    smtp.login('kalphageek@outlook.com','******')
 
     # 미납회원에게 리마인드 메일을 보낸다.
     for name, email in unpaid_members.items():

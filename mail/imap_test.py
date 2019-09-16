@@ -1,7 +1,7 @@
 import imaplib
 import datetime
 imap = imaplib.IMAP4_SSL('outlook.office365.com')
-imap.login('kalphageek@outlook.com','***11211@')
+imap.login('kalphageek@outlook.com','***')
 imap.select('inbox')
 # - 전부 가져오기
 # result, data = imap.uid('search', None, 'ALL')
@@ -14,7 +14,7 @@ result, data = imap.uid('fetch', '7', '(RFC822)')
 email_message = email.message_from_string(data[0][1].decode('utf-8'))
 msg = email.message_from_string(data[0][1].decode('utf-8'))
 to = msg['To']
-# --> ('', 'bi8i@hotmail.com')#
+# --> ('', 'kalphageek@outlook.com')#
 # msg['From'] #--> encode된 형태
 from = email.utils.parseaddr(msg['From'])
 

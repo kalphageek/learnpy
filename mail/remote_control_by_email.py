@@ -9,9 +9,9 @@ import time
 logging.basicConfig(filename='remote_job_log.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Configure the program by setting some variables.
-MY_EMAIL = 'kalphageek@gmail.com' # bot should only respond to me
+MY_EMAIL = 'kalphageek@outlook.com' # bot should only respond to me
 BOT_EMAIL = 'kalphageek@outlook.com'
-BOT_EMAIL_PASSWORD = 'jeong11211@'
+BOT_EMAIL_PASSWORD = '****'
 TORRENT_PROGRAM = 'C:\\Program Files (x86)\\qBittorrent\\qbittorrent.exe'
 SMTP_SERVER = 'smtp.office365.com'
 SMTP_PORT = 587

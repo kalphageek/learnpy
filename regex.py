@@ -34,3 +34,4 @@ for entry in entries:
     items = re.split(":? ", entry)
     for item in items:
         print(item)
+        

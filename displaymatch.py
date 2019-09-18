@@ -3,7 +3,6 @@ def displaymatch(match):
         return None
     return '<Match: %r, groups=%r>' % (match.group(), match.groups())
 
-
 valid = re.compile(r"^[a2-9tjqk]{5}$")
 displaymatch(valid.match("akt5q"))  # Valid.
 #"<Match: 'akt5q', groups=()>"
